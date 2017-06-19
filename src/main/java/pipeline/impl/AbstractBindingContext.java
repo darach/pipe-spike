@@ -98,14 +98,12 @@ public class AbstractBindingContext implements BindingContext {
         if ( !"$".equals(parent.name()) ) {
             throw new IllegalArgumentException("Cannot connect instances to templates");
         } else {
-//            Vertex fv = dag.getVertex(fromVertex);
-//            Vertex tv =
             System.out.println("Connecting: " + dag.getVertex(from(fromVertex)) + " -> " + to(toVertex));
             CachingEdgeModifier sneakyEdge = new CachingEdgeModifier();
             dag.edge(sneakyEdge.apply(edgeModifier.apply(Edge.from(dag.getVertex(from(fromVertex)),fromOrdinal).to(to(toVertex),toOrdinal))));
             Port port = SimplePort.newPort(this.parent, sneakyEdge.edge, "port" + ordinal++);
 
-            dag.iterator(); // Force validation as side-effect
+            dag.iterator(); // HACK Force validation as side-effect
             return port;
         }
 

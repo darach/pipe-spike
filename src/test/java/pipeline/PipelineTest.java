@@ -20,7 +20,6 @@ import static org.junit.Assert.*;
 import pipeline.impl.AbstractPipeline;
 import pipeline.impl.operators.Operators;
 import pipeline.impl.templates.DagTemplate;
-import pipeline.util.FakeValidatingPipeline;
 import pipeline.util.FiniteGenerator;
 
 import static pipeline.PipelineUtil.passthrough;

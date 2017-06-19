@@ -10,7 +10,7 @@ import pipeline.Port;
 
 import javax.annotation.Nonnull;
 
-public class SimplePort implements Port {
+/*package-local*/ class SimplePort implements Port {
     public SimplePort(Pipeline parent, String name, int ordinal, boolean isRequired) {
         this.container = parent;
         this.name = name;

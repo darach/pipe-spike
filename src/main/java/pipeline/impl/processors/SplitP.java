@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * Created by darach on 19/06/2017.
+ * Non-causal branch operation based on jet primitive emit([ordinals],item)
+ * used directly and non-chaining
  */
 public class SplitP extends AbstractProcessor implements Serializable {
     private long serialVersionUid = 1L;

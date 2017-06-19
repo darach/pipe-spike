@@ -1,10 +1,10 @@
-package pipeline.util;
+package pipeline;
 
 import com.hazelcast.jet.DAG;
 import com.hazelcast.jet.Edge;
 import pipeline.BindingContext;
 import pipeline.Pipeline;
-import pipeline.impl.SimplePort;
+import pipeline.Port;
 
 import javax.annotation.Nonnull;
 import java.util.Properties;
@@ -77,17 +77,17 @@ public class FakeValidatingPipeline implements Pipeline {
     }
 
     @Override
-    public SimplePort connect(@Nonnull String fromVertex, @Nonnull String toVertex) {
+    public Port connect(@Nonnull String fromVertex, @Nonnull String toVertex) {
         return null;
     }
 
     @Override
-    public SimplePort connect(@Nonnull String fromVertex, @Nonnull String toVertex, Function<Edge, Edge> edgeModifier) {
+    public Port connect(@Nonnull String fromVertex, @Nonnull String toVertex, Function<Edge, Edge> edgeModifier) {
         return null;
     }
 
     @Override
-    public SimplePort connect(@Nonnull String fromVertex, int fromOrdinal, @Nonnull String toVertex, int toOrdinal, Function<Edge, Edge> edgeModifier) {
+    public Port connect(@Nonnull String fromVertex, int fromOrdinal, @Nonnull String toVertex, int toOrdinal, Function<Edge, Edge> edgeModifier) {
         return null;
     }
 }

@@ -1,13 +1,17 @@
+/**
+ * Copyright (C) Darach Ennis 2017. See LICENSE.txt at the top level of the project
+ */
+
 package pipeline.impl.templates;
 
+import java.util.Properties;
+
 import com.hazelcast.jet.DAG;
-import com.hazelcast.jet.Vertex;
-import pipeline.impl.SimplePort;
+
 import pipeline.impl.AbstractTemplate;
 
 import javax.annotation.Nonnull;
-import java.util.Properties;
-import java.util.stream.Collectors;
+
 
 /**
  * Defines a template in terms of an existing jet DAG
